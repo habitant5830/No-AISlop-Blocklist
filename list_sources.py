@@ -52,9 +52,9 @@ for raw_line in all_lines:
     if host.replace(".", "").isdigit():
         continue
 
-    '''tld = host.split(".")[-1]
+    tld = host.split(".")[-1]
     if tld == "ai":
-        continue'''
+        continue
       
     if len(host.split(".")) < 2:
         continue
