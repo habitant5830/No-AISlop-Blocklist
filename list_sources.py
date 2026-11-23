@@ -1,5 +1,16 @@
 from urllib.request import urlopen
 
+allowed_hosts = set()
+try:
+    with open("allowlist.txt", "r", encoding="utf-8") as f:
+        for line in f:
+            clean = line.split("#")[0].split("!")[0].strip().lower()
+            if clean:
+                clean = clean.removeprefix("www.").strip(".")
+                allowed_hosts.add(clean)
+except FileNotFoundError:
+    print("File not found")
+
 sources = [
     "https://raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/refs/heads/main/noai_hosts.txt",
     "https://raw.githubusercontent.com/habitant5830/No-AISlop-Blocklist/refs/heads/main/custom/denylist.txt",
@@ -48,6 +59,8 @@ for raw_line in all_lines:
     if len(host.split(".")) < 2:
         continue
 
+    if host in allowed_hosts:
+        continue
     # Make adblock style rules
     filtered_lines.append(f"||{host}^")
       
@@ -61,3 +74,4 @@ else:
     with open("denylist.txt", "w", encoding="utf-8") as f:
         for rule in unique_rules:
             f.write(f"{rule}\n")
+
