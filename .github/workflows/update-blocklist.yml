@@ -19,7 +19,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
 - name: Run blocklist generator and commit if changed
         run: |
           python list_sources.py
