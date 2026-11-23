@@ -3,9 +3,6 @@
 
 # Duckduckgo AI
 
-# Gemini
-||gemini.google.com^
-
 # OpenAI
 ||chatgpt.com^
 ||openai.com^
