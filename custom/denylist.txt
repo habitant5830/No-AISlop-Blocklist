@@ -1,8 +1,6 @@
 # Block TLDs
 ||*.ai^
 
-# Duckduckgo AI
-
 # OpenAI
 ||chatgpt.com^
 ||openai.com^
@@ -10,7 +8,7 @@
 # Meta AI
 
 # Brave AI
-||search.brave.com^
+||search.brave.com/ask^
 
 # Unpopular
 ||deepai.org^
