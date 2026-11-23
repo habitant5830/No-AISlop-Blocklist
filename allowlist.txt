@@ -1,0 +1,3 @@
+raw.githubusercontent.com
+google.*
+github.com

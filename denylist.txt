@@ -386,13 +386,11 @@
 ||getnude.app^
 ||ggpredict.io^
 ||giotto.streamlit.app^
-||github.com^
 ||glif.app^
 ||globalbuzznews.com^
 ||globaldailyupdates.com^
 ||globalnewsnetwork.co^
 ||glyphy.io^
-||google.*^
 ||gossipify.com^
 ||gpt4free.io^
 ||gptgirlfriend.online^
@@ -717,7 +715,6 @@
 ||quizgecko.com^
 ||rakugaki-taro.com^
 ||rareconnections.io^
-||raw.githubusercontent.com^
 ||realdeepfakes.com^
 ||recipeshut.com^
 ||redraw.art^
