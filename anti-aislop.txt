@@ -1,2 +1,25 @@
+# Block TLDs
+||ai^
+
 # Duckduckgo AI
-||duck.ai^
+
+# Gemini
+||gemini.google.com^
+
+# OpenAI
+||chatgpt.com^
+||openai.com^
+
+# Meta AI
+
+# Brave AI
+||search.brave.com/ask^
+
+# Unpopular
+||deepai.org^
+||chatai.org^
+||aichatting.net^
+||notegpt.io^
+
+# AI Services
+||grokipedia.com^
