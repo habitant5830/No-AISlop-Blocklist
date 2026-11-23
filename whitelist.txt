@@ -1,3 +1,9 @@
 raw.githubusercontent.com
 google.*
 github.com
+medium.com
+bing.com
+canva.com
+kagi.com
+search.brave.com
+ecosia.org

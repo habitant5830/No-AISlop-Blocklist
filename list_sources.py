@@ -12,10 +12,9 @@ except FileNotFoundError:
     print("File not found")
 
 sources = [
-    "https://raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/refs/heads/main/noai_hosts.txt",
-    "https://raw.githubusercontent.com/habitant5830/No-AISlop-Blocklist/refs/heads/main/custom/denylist.txt",
-    "https://raw.githubusercontent.com/Jadde-1/PiHole-list/main/AI-SLOP-SITES.txt",
-    "https://raw.githubusercontent.com/Stevoisiak/Stevos-AI-Blocklist/refs/heads/main/GenAI-Blocklist-URLs.txt"
+    "manual_denylist.txt",
+    "https://raw.githubusercontent.com/Stevoisiak/Stevos-AI-Blocklist/refs/heads/main/GenAI-Blocklist-URLs.txt",
+    "https://raw.githubusercontent.com/alvi-se/ai-ublock-blacklist/refs/heads/master/list.txt"
 ]
 
 pending_header = None
@@ -29,13 +28,21 @@ seen_rules = set()
 grouped = {}
 
 for url in sources:
-    try:
-        with urlopen(url, timeout=15) as resp:
-            text = resp.read().decode("utf-8")
-            for line in text.splitlines():
-                all_lines.append((url, line))
-    except:
-        print("Network connection failed to ",url)
+    if url.startswith(("http://", "https://")):
+        try:
+            with urlopen(url, timeout=15) as resp:
+                text = resp.read().decode("utf-8")
+                for line in text.splitlines():
+                    all_lines.append((url, line))
+        except:
+            print("Network connection failed to ",url)
+    else:      
+        try:
+            with open(url, "r", encoding="utf-8") as f:
+                for line in f:
+                    all_lines.append((url, line))
+        except FileNotFoundError:
+            print("File not found")  
 
 for source_url, raw_line in all_lines:
 
