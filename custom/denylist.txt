@@ -1,21 +1,16 @@
-# Block TLDs
-||*.ai^
-
 # OpenAI
-||chatgpt.com^
-||openai.com^
+chatgpt.com
+openai.com
 
 # Meta AI
-
-# Brave AI
-||search.brave.com/ask^
+meta.ai
 
 # Unpopular
-||deepai.org^
-||chatai.org^
-||aichatting.net^
-||notegpt.io^
-||nakamaai.app^
+deepai.org
+chatai.org
+aichatting.net
+notegpt.io
+nakamaai.app
 
 # AI Services
-||grokipedia.com^
+grokipedia.com

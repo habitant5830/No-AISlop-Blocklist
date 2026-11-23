@@ -2,7 +2,7 @@ from urllib.request import urlopen
 
 allowed_hosts = set()
 try:
-    with open("allowlist.txt", "r", encoding="utf-8") as f:
+    with open("whitelist.txt", "r", encoding="utf-8") as f:
         for line in f:
             clean = line.split("#")[0].split("!")[0].strip().lower()
             if clean:
@@ -18,21 +18,29 @@ sources = [
     "https://raw.githubusercontent.com/Stevoisiak/Stevos-AI-Blocklist/refs/heads/main/GenAI-Blocklist-URLs.txt"
 ]
 
+pending_header = None
+current_header = None
+last_source = None
 all_lines = []
-filtered_lines = []
+debug_lines = []
+final_lines= []
+sorted_final_lines = []
+seen_rules = set()
+grouped = {}
 
 for url in sources:
     try:
         with urlopen(url, timeout=15) as resp:
             text = resp.read().decode("utf-8")
-            all_lines.extend(text.splitlines())
+            for line in text.splitlines():
+                all_lines.append((url, line))
     except:
         print("Network connection failed to ",url)
 
-for raw_line in all_lines:
+for source_url, raw_line in all_lines:
+
+    # Filtering and Normalization    
     line = raw_line.strip()
-   
-    # Filters
     line = line.split("#")[0].strip()
     if not line or line.startswith("#"):
         continue
@@ -46,32 +54,62 @@ for raw_line in all_lines:
     host = host.split("$")[0]
     host = host.split(":")[0]
     host = host.split("^")[0]
-    host = host.strip(".")
+    host = host.strip(".[]()\"'")
     if host == "":
         continue
     if host.replace(".", "").isdigit():
         continue
 
-    tld = host.split(".")[-1]
+    # Disabled tld filtering
+    '''tld = host.split(".")[-1]
     if tld == "ai":
-        continue
+        continue'''
       
     if len(host.split(".")) < 2:
         continue
 
     if host in allowed_hosts:
         continue
-    # Make adblock style rules
-    filtered_lines.append(f"||{host}^")
-      
-# De-duplication
-unique_rules = list(dict.fromkeys(filtered_lines))
-unique_rules.sort()
 
-if len(unique_rules) <= 0:
+    # Comparing headers
+    if source_url != last_source:
+        debug_lines.append(f"# === {source_url} ===")
+        last_source = source_url
+    debug_lines.append(f"||{host}^")
+
+# De-duplication
+for entry in debug_lines:
+    if entry.startswith("# === "):
+        pending_header = entry
+    else:
+        if entry not in seen_rules:
+            seen_rules.add(entry)
+            if pending_header is not None:
+                final_lines.append(pending_header)
+                pending_header = None
+            final_lines.append(entry)
+
+# Sorting
+for line in final_lines:
+    if line.startswith("# === "):
+        current_header = line
+        grouped.setdefault(current_header, [])
+    else:
+        grouped[current_header].append(line)
+
+for header, rules in grouped.items():
+    rules.sort()
+    if sorted_final_lines:
+        sorted_final_lines.append("")
+    sorted_final_lines.append(header)
+    sorted_final_lines.extend(rules)
+
+print("Fetched rules:", len(all_lines))
+print("Unique Rules:", len(seen_rules))
+
+if len(seen_rules) <= 0:
     print("0 rules generated.")
 else:
-    with open("denylist.txt", "w", encoding="utf-8") as f:
-        for rule in unique_rules:
+    with open("blocklist.txt", "w", encoding="utf-8") as f:
+        for rule in sorted_final_lines:
             f.write(f"{rule}\n")
-
