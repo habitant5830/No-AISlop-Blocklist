@@ -13,7 +13,7 @@
 # Meta AI
 
 # Brave AI
-||search.brave.com/ask^
+||search.brave.com^
 
 # Unpopular
 ||deepai.org^
