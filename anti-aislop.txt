@@ -1,5 +1,5 @@
 # Block TLDs
-||ai^
+||*.ai^
 
 # Duckduckgo AI
 
@@ -20,6 +20,7 @@
 ||chatai.org^
 ||aichatting.net^
 ||notegpt.io^
+||nakamaai.app^
 
 # AI Services
 ||grokipedia.com^
