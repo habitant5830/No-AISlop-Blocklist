@@ -30,6 +30,8 @@ jobs:
           git add debug/dead_strikes.json
           if ! git diff --cached --quiet; then
             git commit -m "Update blocklist.txt and strike data"
-            git pull --rebase --autostash origin main
-            git push
+            if ! git push; then
+              git pull --rebase --autostash origin main
+              git push
+            fi
           fi
