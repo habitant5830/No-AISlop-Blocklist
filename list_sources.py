@@ -159,7 +159,7 @@ version = now.strftime("%Y.%m%d.%H%M.%S")
 
 header_lines = [
     "[Adblock Plus]",
-    "! Title: No-AISlop-Blocklist",
+    "! Title: Tux-Terminal-DeSlop-Blocklist",
     "! Description: Curated AI domain blocklist merged from remote sources and manual denylist.",
     "! Expires: 6 hours",
     f"! Last modified: {last_modified}",
