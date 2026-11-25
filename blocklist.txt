@@ -2,10 +2,10 @@
 ! Title: Tux-Terminal-DeSlop-Blocklist
 ! Description: Curated AI domain blocklist merged from remote sources and manual denylist.
 ! Expires: 6 hours
-! Last modified: 25 Nov 2026 00:48 UTC
-! Version: 2026.1125.0048.32
+! Last modified: 25 Nov 2026 06:30 UTC
+! Version: 2026.1125.0630.28
 ! Syntax: AdBlock
-! Number of entries: 1401
+! Number of entries: 1403
 !
 ! === manual_denylist.txt ===
 ||*.ai-gateway.gitlab.com^
@@ -346,6 +346,7 @@
 ||spmates.com^
 ||stackoverflow.com^
 ||starryai.com^
+||sugarlab.ai^
 ||sunnoai.com^
 ||suno.com^
 ||sweetdream.ai^
@@ -355,6 +356,7 @@
 ||teaseme.ai^
 ||texthub.me^
 ||trynectar.ai^
+||urbandictionary.ai^
 ||visualgpt.io^
 ||xchats.ai^
 ||xme.bio^
