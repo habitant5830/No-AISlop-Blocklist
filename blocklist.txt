@@ -2,10 +2,10 @@
 ! Title: Tux-Terminal-DeSlop-Blocklist
 ! Description: Curated AI domain blocklist merged from remote sources and manual denylist.
 ! Expires: 6 hours
-! Last modified: 26 Nov 2026 06:30 UTC
-! Version: 2026.1126.0630.38
+! Last modified: 26 Nov 2026 12:30 UTC
+! Version: 2026.1126.1230.36
 ! Syntax: AdBlock
-! Number of entries: 1260
+! Number of entries: 1254
 !
 ! === manual_denylist.txt ===
 ||*.ai-gateway.gitlab.com^
@@ -267,7 +267,6 @@
 ||joi.com^
 ||juicychat.ai^
 ||juicychat.us^
-||juicymolt.com^
 ||kimi.ai^
 ||kimi.com^
 ||krush.chat^
@@ -342,7 +341,6 @@
 ||spicy.porn^
 ||spicycam.ai^
 ||spicychat.ai^
-||spicymate.ai^
 ||spmates.com^
 ||stackoverflow.com^
 ||starryai.com^
@@ -418,7 +416,6 @@
 ||aimons.xyz^
 ||aioli.ai^
 ||aipassportphotos.com^
-||aiphotos123.art^
 ||aipicasso.app^
 ||aipicasso.studio.site^
 ||aipictors.com^
@@ -493,7 +490,6 @@
 ||avtrs.ai^
 ||background.lol^
 ||baked-ai.com^
-||bare.club^
 ||bargpt.app^
 ||basedlabs.ai^
 ||bashable.art^
@@ -506,7 +502,6 @@
 ||bgrem.ai^
 ||bigshadows.net^
 ||blackink.ai^
-||blimeycreate.com^
 ||bloomoon.art^
 ||blueprint.ai^
 ||blueshadow.art^
@@ -1154,7 +1149,6 @@
 ||talkie-ai.com^
 ||talkpal.ai^
 ||tammy.ai^
-||tattoosgenerator.ai^
 ||tdraw.art^
 ||teacherbot.io^
 ||technolynx.com^
