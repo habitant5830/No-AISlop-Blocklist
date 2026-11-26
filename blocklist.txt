@@ -2,10 +2,10 @@
 ! Title: Tux-Terminal-DeSlop-Blocklist
 ! Description: Curated AI domain blocklist merged from remote sources and manual denylist.
 ! Expires: 6 hours
-! Last modified: 26 Nov 2026 12:30 UTC
-! Version: 2026.1126.1230.36
+! Last modified: 26 Nov 2026 18:30 UTC
+! Version: 2026.1126.1830.30
 ! Syntax: AdBlock
-! Number of entries: 1254
+! Number of entries: 1259
 !
 ! === manual_denylist.txt ===
 ||*.ai-gateway.gitlab.com^
@@ -490,6 +490,7 @@
 ||avtrs.ai^
 ||background.lol^
 ||baked-ai.com^
+||bare.club^
 ||bargpt.app^
 ||basedlabs.ai^
 ||bashable.art^
@@ -502,6 +503,7 @@
 ||bgrem.ai^
 ||bigshadows.net^
 ||blackink.ai^
+||blimeycreate.com^
 ||bloomoon.art^
 ||blueprint.ai^
 ||blueshadow.art^
@@ -698,6 +700,7 @@
 ||fullbloomclub.net^
 ||future-pedia.com^
 ||futurepedia.io^
+||fuups.ai^
 ||fykoo.com^
 ||gab.ai^
 ||gachax.com^
@@ -1022,6 +1025,7 @@
 ||pornwaifu.io^
 ||pornworks.ai^
 ||portraitai.com^
+||portret.ai^
 ||postalai.co^
 ||powerusers.ai^
 ||privee.ai^
@@ -1232,6 +1236,7 @@
 ||voiceand.ai^
 ||voicebot.ai^
 ||voicify.ai^
+||voidsynth.art^
 ||vondy.com^
 ||vrai.art^
 ||waifu.com.mx^
