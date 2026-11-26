@@ -142,3 +142,4 @@ yoohoo.cards
 zavant.ai
 zetu.art
 voidsynth.art
+portret.ai

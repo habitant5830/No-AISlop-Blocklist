@@ -2,10 +2,10 @@
 ! Title: Tux-Terminal-DeSlop-Blocklist
 ! Description: Curated AI domain blocklist merged from remote sources and manual denylist.
 ! Expires: 6 hours
-! Last modified: 25 Nov 2026 18:30 UTC
-! Version: 2026.1125.1830.34
+! Last modified: 26 Nov 2026 00:30 UTC
+! Version: 2026.1126.0030.31
 ! Syntax: AdBlock
-! Number of entries: 1262
+! Number of entries: 1261
 !
 ! === manual_denylist.txt ===
 ||*.ai-gateway.gitlab.com^
@@ -1239,7 +1239,6 @@
 ||voiceand.ai^
 ||voicebot.ai^
 ||voicify.ai^
-||voidsynth.art^
 ||vondy.com^
 ||vrai.art^
 ||waifu.com.mx^
