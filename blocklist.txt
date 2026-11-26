@@ -2,10 +2,10 @@
 ! Title: Tux-Terminal-DeSlop-Blocklist
 ! Description: Curated AI domain blocklist merged from remote sources and manual denylist.
 ! Expires: 6 hours
-! Last modified: 26 Nov 2026 00:30 UTC
-! Version: 2026.1126.0030.31
+! Last modified: 26 Nov 2026 06:30 UTC
+! Version: 2026.1126.0630.38
 ! Syntax: AdBlock
-! Number of entries: 1261
+! Number of entries: 1260
 !
 ! === manual_denylist.txt ===
 ||*.ai-gateway.gitlab.com^
@@ -1027,7 +1027,6 @@
 ||pornwaifu.io^
 ||pornworks.ai^
 ||portraitai.com^
-||portret.ai^
 ||postalai.co^
 ||powerusers.ai^
 ||privee.ai^
