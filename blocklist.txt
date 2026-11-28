@@ -2,8 +2,8 @@
 ! Title: Tux-Terminal-DeSlop-Blocklist
 ! Description: Curated AI domain blocklist merged from remote sources and manual denylist.
 ! Expires: 6 hours
-! Last modified: 28 Nov 2026 12:30 UTC
-! Version: 2026.1128.1230.34
+! Last modified: 28 Nov 2026 18:30 UTC
+! Version: 2026.1128.1830.32
 ! Syntax: AdBlock
 ! Number of entries: 1260
 !
@@ -252,6 +252,7 @@
 ||gptgirlfriend.online^
 ||grok.com^
 ||halfphoto.com^
+||hentaihub.com^
 ||honea.ai^
 ||honeypot.com^
 ||hotgens.net^
@@ -941,7 +942,6 @@
 ||odastudio.ai^
 ||oksuro.com^
 ||onlybabes.ai^
-||onlyfakes.app^
 ||onlyhent.ai^
 ||onlynsfw.ai^
 ||onlyrizz.ai^
